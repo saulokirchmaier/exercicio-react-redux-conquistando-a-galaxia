@@ -1,0 +1,74 @@
+.Space {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.earth {
+  max-width: 500px;
+  top: 30%;
+}
+
+.moon {
+  max-width: 250px;
+  top: 40%;
+}
+
+.mars {
+  max-width: 400px;
+  top: 35%;
+}
+
+.satellite {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.satellite img {
+  height: 100px;
+}
+
+/* .trybe {
+  border-radius: 50%;
+  max-width: 100px;
+  left: 20px;
+  top: 50%;
+} */
+
+.left {
+  position: fixed;
+  left: -5%;
+}
+
+.rigth {
+  position: fixed;
+  right: -5%;
+}
+
+.center {
+  left: 40%;
+  position: fixed;
+}
+
+.rocket {
+  height: 100px;
+  transform: rotate(90deg);
+  z-index: 1;
+  top: 50%;
+}
+
+.rocket-base {
+  position: fixed;
+  left: 0;
+}
+
+.rocket-launch {
+  position: fixed;
+  right: 5%;
+}
+
+button {
+  font-size: 25px;
+  margin-right: 10px;
+}
