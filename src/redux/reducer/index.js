@@ -1,10 +1,6 @@
 import { combineReducers } from 'redux';
 import spaceReducer from './spaceReducer';
-import marsReducer from './marsReducer';
 
-const rootReducer = combineReducers({
-  spaceReducer,
-  marsReducer,
-});
+const rootReducer = combineReducers({});
 
 export default rootReducer;

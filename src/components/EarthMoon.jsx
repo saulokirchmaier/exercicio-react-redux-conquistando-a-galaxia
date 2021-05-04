@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { launchRocket, reachMoon } from '../redux/actions';
+import { reachMoon } from '../redux/actions';
 import rocket from '../img/rocket.png'
 import moon from '../img/moon.png'
 import earth from '../img/earth.png'
@@ -20,7 +20,6 @@ class EarthMoon extends React.Component {
       alert('Parabens você chegou a Lua, construa uma base e vamos para Marte! 🚀️');
       toMoon();
     }, 2000);
-
   }
   
   render () {
@@ -47,7 +46,6 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  launch: () => dispatch(launchRocket()),
   toMoon: () => dispatch(reachMoon()),
 })
 
