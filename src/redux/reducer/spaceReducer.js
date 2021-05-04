@@ -16,7 +16,7 @@ function spaceReducer(state = INITIAL_STATE, action) {
     case SET_TO_BASE:
       return { ...state, launchRocket: false };
     case CONSTRUCT_BASE:
-      return { ...state, moonBase: state.moonBase + 1 };
+      return { ...state, moonBase: state.moonBase + 10 };
     case REACH_MARS:
       return { ...state, reachMars: true };
     default:

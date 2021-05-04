@@ -31,7 +31,7 @@ class MoonMars extends React.Component {
   buildSatellite() {
     const { name } = this.state;
     const { makeSatellite, base } = this.props;
-    if (base < 10) return alert('A base não está pronta.')
+    if (base < 100) return alert('A base não está pronta.')
     if (name !== '') {
       this.setState({ name: '' });
       makeSatellite(name);
@@ -47,18 +47,18 @@ class MoonMars extends React.Component {
             type="button"
             value="base"
             onClick={ this.constructBase }
-            disabled={ base >= 10 }
+            disabled={ base >= 100 }
           >
             Contruir Base
           </button>
           <input type="text" value={ name } onChange={ this.handleChange }/>
           <button type="button" onClick={ this.buildSatellite }>Lançar Satélite</button>
           <div>
-            <h2>Base { base * 10 }% construida!</h2>
+            <h2>Base { base  }% construida!</h2>
           </div>
         <div>
-          {base < 10 && <img src={ mars } alt="moon" className="mars center" />}
-          {base >= 10 && <img src={ marsBase } alt="moon" className="mars center"/>}
+          {base < 100 && <img src={ mars } alt="moon" className="mars center" />}
+          {base >= 100 && <img src={ marsBase } alt="moon" className="mars center"/>}
           <div className="satellite"> 
             {satellites.map((satellite) => (
               <div key={ Math.random() }>

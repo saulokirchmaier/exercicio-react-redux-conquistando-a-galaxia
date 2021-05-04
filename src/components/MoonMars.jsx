@@ -22,8 +22,8 @@ class MoonMars extends React.Component {
   handleClick({ target: { value } }) {
     const { launch, moonBase, construct, toMars } = this.props;
     if (value === 'base') construct();
-    else if (value === 'launch' && moonBase < 10) alert('Construa a base Lunar antes de partir para marte!')
-    else if (value === 'launch' && moonBase >= 10) {
+    else if (value === 'launch' && moonBase < 100) alert('Construa a base Lunar antes de partir para marte!')
+    else if (value === 'launch' && moonBase >= 100) {
       launch();
       setTimeout(() => {
         alert('Parabens você chegou a Marte, construa a base operacional e proteja o planeta de invasões! 🚀️');
@@ -40,17 +40,17 @@ class MoonMars extends React.Component {
           type="button"
           value="base"
           onClick={ this.handleClick }
-          disabled={ moonBase >= 10 }
+          disabled={ moonBase >= 100 }
         >
-          Contruir Base
+          Construir Base
         </button>
         <button type="button" value="launch" onClick={ this.handleClick }>Decolar</button>
         <div>
-          <h2>Base { moonBase * 10 }% construida!</h2>
+          <h2>Base { moonBase }% construida!</h2>
         </div>
         <div>
-          {moonBase < 10 && <img src={ moon } alt="moon" className="left moon" />}
-          {moonBase >= 10 && <img src={ lunarBase } alt="moon" className="left moon"/>}
+          {moonBase < 100 && <img src={ moon } alt="moon" className="left moon" />}
+          {moonBase >= 100 && <img src={ lunarBase } alt="moon" className="left moon"/>}
           <img
             src={ rocket }
             alt="rocket"
