@@ -43,7 +43,14 @@ class MoonMars extends React.Component {
     const { base, satellites } = this.props;
     return (
       <div className="base-mars">
-          <button type="button" value="base" onClick={ this.constructBase }>Contruir Base</button>
+          <button
+            type="button"
+            value="base"
+            onClick={ this.constructBase }
+            disabled={ base >= 10 }
+          >
+            Contruir Base
+          </button>
           <input type="text" value={ name } onChange={ this.handleChange }/>
           <button type="button" onClick={ this.buildSatellite }>Lançar Satélite</button>
           <div>

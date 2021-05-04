@@ -19,7 +19,7 @@ class EarthMoon extends React.Component {
     setTimeout(() => {
       alert('Parabens você chegou a Lua, construa uma base e vamos para Marte! 🚀️');
       toMoon();
-    }, 500);
+    }, 2000);
 
   }
   

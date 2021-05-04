@@ -28,7 +28,7 @@ class MoonMars extends React.Component {
       setTimeout(() => {
         alert('Parabens você chegou a Marte, construa a base operacional e proteja o planeta de invasões! 🚀️');
         toMars();
-      }, 500);
+      }, 2000);
     }
   }
   
@@ -36,7 +36,14 @@ class MoonMars extends React.Component {
     const { launchRocket, moonBase } = this.props;
     return (
       <div className="moon-mars">
-        <button type="button" value="base" onClick={ this.handleClick }>Contruir Base</button>
+        <button
+          type="button"
+          value="base"
+          onClick={ this.handleClick }
+          disabled={ moonBase >= 10 }
+        >
+          Contruir Base
+        </button>
         <button type="button" value="launch" onClick={ this.handleClick }>Decolar</button>
         <div>
           <h2>Base { moonBase * 10 }% construida!</h2>

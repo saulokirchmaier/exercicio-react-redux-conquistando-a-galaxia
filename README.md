@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# Exercício React com Redux conquistando a galaxia
+Repositório de exercício para a aula 16.2, gerenciamento de estado com Redux no React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Antes de iniciar
+Crie um fork desse repositótio, você pode utilizar esse [tutorial](https://guides.github.com/activities/forking/) para realizar o fork.
 
-## Available Scripts
+Com o fork criado clone o repositório no seu computador, e vá para a pasta do exercício:
+  ```
+    git clone <link-do-repositório>
+    cd exercicio-redux-conquistar-a-galaxia
+  ```
+Instale as dependências:
+  ```
+    npm install
+  ```
+Vá para a branch master, e verifique as branchs de exercícios:
+  ```
+  git checkout master
+  git branch
+  ```
+As sequintes branchs devem aparecer:
+  ```
+  exercise-one
+  exercise-two
+  exercise-three
+  ```
+Faça os exercícios seguindo as instruções de cada um deles.
 
-In the project directory, you can run:
+Após completar, abra um PR no seu repositório forkado, se quiser peça um CR de algum amigo, ou mergeie com a master.
 
-### `npm start`
+**Atenção!** Quando for criar o PR, lembre-se de indicar a branch certa!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Iniciando os exercícios
+Não se preocupe com o CSS hoje, consentre-se em entender o React-Redux.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Exercício 1
+Vá para para branch `exercise-one`
+ - A store do Redux ja está criada, porém ela não está conectada com a aplicação, para isso vá oa `/src/index.js` e conecte o Provider com a store;
+ - O reducer já existe, mas não está ligado a aplicação, arrume isso em `/src/redux/reducer/index.js`;
+ - As actions não estão executando, abra o arquivo `/src/redux/actions/index.js` e adicione as action.types nos locais certos.
 
-### `npm test`
+### Exercício 2
+Vá para para branch `exercise-two`
+ - 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Exercício 3
+Vá para para branch `exercise-three`
+ - Você deverá contruir sua base e em Marte e proteger o planeta de futuras invasões.
