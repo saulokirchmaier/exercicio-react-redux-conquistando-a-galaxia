@@ -16,9 +16,6 @@ export const constructBase = () => ({ type: CONSTRUCT_BASE });
 
 export const reachMars= () => ({ type: REACH_MARS });
 
-export const constructMarsBase = () => ({ type: CONSTRUCT_MARS_BASE });
+export const constructMarsBase = () => ({});
 
-export const constructSatellite = (name) => ({
-  type: CONSTRUCT_SATELLITE,
-  name,
-});
+export const constructSatellite = () => ({});

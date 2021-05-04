@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { constructMarsBase, constructSatellite } from '../redux/actions';
+import { constructMarsBase } from '../redux/actions';
 import mars from '../img/mars.png'
 import marsBase from '../img/mars-base.png'
 import satelliteImg from '../img/satellite.png'
@@ -10,32 +10,19 @@ class MoonMars extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      name: '',
-    }
 
     this.constructBase = this.constructBase.bind(this);
-    this.handleChange = this.handleChange.bind(this);
     this.buildSatellite = this.buildSatellite.bind(this);
   }
 
-  handleChange({ target: { value } }) {
-    this.setState({ name: value });
-  }
 
-  constructBase({ target: { value } }) {
-    const { construct } = this.props;
-    if (value === 'base') construct();
+  constructBase() {
+    construct();
   }
 
   buildSatellite() {
-    const { name } = this.state;
-    const { makeSatellite, base } = this.props;
+    const { base } = this.props;
     if (base < 100) return alert('A base não está pronta.')
-    if (name !== '') {
-      this.setState({ name: '' });
-      makeSatellite(name);
-    } else alert('Satélite sem nome.')
   }
   
   render () {
@@ -51,7 +38,7 @@ class MoonMars extends React.Component {
           >
             Contruir Base
           </button>
-          <input type="text" value={ name } onChange={ this.handleChange }/>
+          <input type="text" />
           <button type="button" onClick={ this.buildSatellite }>Lançar Satélite</button>
           <div>
             <h2>Base { base  }% construida!</h2>
@@ -73,14 +60,8 @@ class MoonMars extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  base: state.marsReducer.base,
-  satellites: state.marsReducer.satellites,
-})
-
 const mapDispatchToProps = (dispatch) => ({
   construct: () => dispatch(constructMarsBase()),
-  makeSatellite: (name) => dispatch(constructSatellite(name))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(MoonMars);
+export default connect(null, mapDispatchToProps)(MoonMars);

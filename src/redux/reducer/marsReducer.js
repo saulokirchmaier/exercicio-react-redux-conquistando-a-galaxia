@@ -1,4 +1,4 @@
-import { CONSTRUCT_MARS_BASE, CONSTRUCT_SATELLITE } from '../actions';
+import { CONSTRUCT_MARS_BASE } from '../actions';
 
 const INITIAL_STATE = {
   base: 0,
@@ -9,8 +9,6 @@ function marsReducer(state = INITIAL_STATE, action) {
   switch (action.type) {
     case CONSTRUCT_MARS_BASE:
       return { ...state, base: state.base + 10 };
-    case CONSTRUCT_SATELLITE:
-      return { ...state, satellites: [...state.satellites, action.name]};
     default:
       return state;
   };
