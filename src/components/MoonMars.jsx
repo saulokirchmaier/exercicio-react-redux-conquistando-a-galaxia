@@ -40,7 +40,6 @@ class MoonMars extends React.Component {
           type="button"
           value="base"
           onClick={ this.handleClick }
-          disabled={ moonBase >= 100 }
         >
           Construir Base
         </button>
@@ -49,7 +48,7 @@ class MoonMars extends React.Component {
           <h2>Base { moonBase }% construida!</h2>
         </div>
         <div>
-          {moonBase < 100 && <img src={ moon } alt="moon" className="left moon" />}
+          <img src={ moon } alt="moon" className="left moon" />
           {moonBase >= 100 && <img src={ lunarBase } alt="moon" className="left moon"/>}
           <img
             src={ rocket }
@@ -65,13 +64,11 @@ class MoonMars extends React.Component {
 
 const mapStateToProps = (state) => ({
   launchRocket: state.spaceReducer.launchRocket,
-  moonBase: state.spaceReducer.moonBase,
 })
 
 const mapDispatchToProps = (dispatch) => ({
   launch: () => dispatch(launchRocket()),
   setToBase: () => dispatch(setRocketToBase()),
-  construct: () => dispatch(constructBase()),
   toMars: () => dispatch(reachMars()),
 })
 

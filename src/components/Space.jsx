@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import EarthMoon from './EarthMoon';
-import Mars from './Mars';
 import MoonMars from './MoonMars';
 import './Space.css';
 
@@ -11,8 +10,7 @@ class Space extends React.Component {
     return (
       <div className="Space">
         {!reachedMoon && <EarthMoon />}
-        {reachedMoon && !reachedMars && <MoonMars />}
-        {reachedMars && <Mars />}
+        {reachedMoon  && <MoonMars />}
       </div>
     );
   }
