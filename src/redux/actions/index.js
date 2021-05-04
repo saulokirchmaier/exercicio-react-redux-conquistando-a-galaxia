@@ -3,8 +3,6 @@ export const REACH_MOON = 'REACH_MOON';
 export const SET_TO_BASE = 'SET_TO_BASE';
 export const CONSTRUCT_BASE = 'CONSTRUCT_BASE';
 export const REACH_MARS = 'REACH_MARS';
-export const CONSTRUCT_MARS_BASE = 'CONSTRUCT_MARS_BASE';
-export const CONSTRUCT_SATELLITE = 'CONSTRUCT_SATELLITE';
 
 export const launchRocket = () => ({ type: MOVE_ROCKET });
 
